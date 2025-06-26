@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -63,8 +63,8 @@
 </head>
 <body>
 
-  <h1>Will You Be Baljkaa's girlfrend 💖</h1>
-  <p>Netflix and chill? Nah. Let’s skip the movie and make our own scenes.</p>
+  <h1>Will You Be my girlfrend 💖</h1>
+  <p>Ci huurhun bi huurhun 2 uula huurhun hamtdaa 3 dahi huurhuniig buteehu ?</p>
 
   <div class="buttons">
     <button onclick="sayYes()">Yes 💖</button>

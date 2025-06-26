@@ -63,8 +63,8 @@
 </head>
 <body>
 
-  <h1>Will You Be my girlfrend 💖</h1>
-  <p>Ci huurhun bi huurhun 2 uula huurhun hamtdaa 3 dahi huurhuniig buteehu ?</p>
+  <h1>Will You Be Baljkaa's girlfrend💖</h1>
+  <p>Baljkaag borluulan?</p>
 
   <div class="buttons">
     <button onclick="sayYes()">Yes 💖</button>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Will You Be Mine? 💘</title>
+  <title>You so pretty asf? 💘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
@@ -63,8 +63,8 @@
 </head>
 <body>
 
-  <h1>Will You Be My Girlfriend? 💖</h1>
-  <p>You make my world better every single day!</p>
+  <h1>Will You Be Baljkaa's girlfrend 💖</h1>
+  <p>Netflix and chill? Nah. Let’s skip the movie and make our own scenes.</p>
 
   <div class="buttons">
     <button onclick="sayYes()">Yes 💖</button>

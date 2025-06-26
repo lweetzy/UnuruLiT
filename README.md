@@ -1,107 +1,106 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Project Nyaan</title>
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<style>
-		body {
-			padding-top: 50px;
-			background-color: lightgray;
-		}
-		.starter-template {
-			padding: 40px 15px;
-			background-color: white;
-		}
-	</style>
+  <meta charset="UTF-8" />
+  <title>Will You Be Mine? 💘</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #ffb6c1, #ffe4e1);
+      font-family: 'Segoe UI', cursive;
+      text-align: center;
+      color: #d6336c;
+    }
+    h1 {
+      margin-top: 100px;
+      font-size: 42px;
+    }
+    p {
+      font-size: 24px;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #ff69b4;
+      color: white;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ff85c1;
+    }
+    #response {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    .heart {
+      color: #ff69b4;
+      font-size: 24px;
+      position: absolute;
+      animation: float 6s ease-in infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
 </head>
-
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Project Nyaan</a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#list">List</a></li>
-					<li><a href="#table">Table</a></li>
-					<li><a href="#form">Form</a></li>
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</nav>
-	<div class="container">
-		<div class="starter-template">
-			<h1>吾輩は猫である。</h1>
-			<p class="lead">名前はまだない。</p>
-			<img src="https://paiza-webapp.s3.amazonaws.com/files/learning/photo_cat_1024.jpg" class="img-responsive center-block">
-			<p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。
-			</p>
-			<h2 id="list">動物リスト</h2>
-			<ul class="list-group">
-				<li class="list-group-item">ねこ</li>
-				<li class="list-group-item">いぬ</li>
-				<li class="list-group-item">うさぎ</li>
-			</ul>
-			<h2 id="table">猫テーブル</h2>
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>名前</th>
-						<th>特徴</th>
-						<th>住所</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>1</td>
-						<td>たま</td>
-						<td>くつ下</td>
-						<td>東京都港区南青山</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>ミケ</td>
-						<td>三毛</td>
-						<td>東京都千代田区秋葉原駅周辺</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>トラ</td>
-						<td>シマ</td>
-						<td>兵庫県西宮市甲子園町</td>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>にゃあ</td>
-						<td>トラの兄弟</td>
-						<td>兵庫県西宮市甲子園町</td>
-					</tr>
-				</tbody>
-			</table>
-			<h2 id="form">猫フォーム</h2>
-			<hr>
-			<a class="btn btn-primary" href="#">Topに戻る</a>
-		</div>
-	</div>
-	<!-- /.container -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</body>
 
+  <h1>Will You Be My Girlfriend? 💖</h1>
+  <p>You make my world better every single day!</p>
+
+  <div class="buttons">
+    <button onclick="sayYes()">Yes 💖</button>
+    <button onclick="sayNo()">No 💔</button>
+  </div>
+
+  <div id="response"></div>
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("response").innerHTML = "💘 Thank you, my love! You made me the happiest person alive! 💘";
+    }
+
+    function sayNo() {
+      document.getElementById("response").innerHTML = "⚠️ Error: You can't say no to this much love 😭";
+      alert("System crash: Too much heartbreak detected 💔");
+    }
+    // Heart animation
+    const hearts = document.getElementById('hearts');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (2 + Math.random() * 3) + 's';
+      heart.textContent = '💗';
+      hearts.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
 </html>
 
+
+ 

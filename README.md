@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>7.19 nd zawtai yu undaahai ?</title>
+  <title>Date on July 19?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -13,21 +14,20 @@
       overflow: hidden;
     }
     .container {
-      padding: 60px 20px;
+      padding: 40px 20px;
       position: relative;
       z-index: 2;
     }
     h1 {
-      font-size: 3em;
+      font-size: 2em;
       margin-bottom: 10px;
     }
     h2 {
-      font-size: 2em;
-      margin-bottom: 30px;
+      font-size: 1.5em;
+      margin-bottom: 20px;
     }
     .heart {
-      font-size: 3em;
-      color: #ff4d6d;
+      font-size: 2.5em;
       animation: pulse 1.2s infinite;
     }
     @keyframes pulse {
@@ -40,19 +40,19 @@
       border: 2px solid #ffb6c1;
       border-radius: 20px;
       display: inline-block;
-      padding: 30px;
+      padding: 20px;
       box-shadow: 0 10px 20px rgba(255, 105, 135, 0.2);
       position: relative;
+      max-width: 90%;
     }
     button {
       background-color: #ff6b81;
       color: white;
       border: none;
-      padding: 15px 30px;
-      font-size: 1.2em;
+      padding: 12px 24px;
+      font-size: 1.1em;
       border-radius: 30px;
       cursor: pointer;
-      transition: background-color 0.3s;
       margin: 10px;
     }
     button:hover {
@@ -61,17 +61,17 @@
     #no-button {
       position: absolute;
       left: 50%;
-      top: 200px;
+      top: 180px;
       transform: translateX(-50%);
     }
     .mandarin-fruit {
-      font-size: 2.5em;
-      margin-top: 60px;
+      font-size: 2em;
+      margin-top: 40px;
       color: orange;
       position: relative;
     }
     .mandarin-fruit span {
-      font-size: 1.2em;
+      font-size: 1em;
       color: #333;
       display: block;
     }
@@ -86,8 +86,13 @@
       50% { opacity: 1; }
       100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
     }
-    #music {
+    #music { display: none; }
+    #cat-gif {
+      margin-top: 20px;
       display: none;
+      max-width: 100%;
+      width: 200px;
+      border-radius: 15px;
     }
   </style>
 </head>
@@ -108,19 +113,20 @@
   }
 </script>
 
-<!-- Main content -->
+<!-- Main Content -->
 <div class="container">
   <div class="date-card">
     <div class="heart">❤️</div>
-    <h1>19 nd zawtai bol bolzoo nd ywahku biz Undaahai</h1>
+    <h1>19nd zawtai bol nadtai bolzohkui biz undaahai?</h1>
     <h2>📅 July 19th</h2>
     <button id="yes-button">Yes</button>
     <button id="no-button">No</button>
-    <div class="mandarin-fruit" id="mandarin">🍊<span>Huurhun Mandarin!</span></div>
+    <div class="mandarin-fruit" id="mandarin">🍊<span>Huurhun mandarin!</span></div>
+    <img id="cat-gif" src="https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif" alt="Dancing Cat">
   </div>
 </div>
 
-<!-- No button runaway script -->
+<!-- No button runaway -->
 <script>
   const noBtn = document.getElementById('no-button');
   const card = document.querySelector('.date-card');
@@ -150,21 +156,24 @@
   });
 </script>
 
-<!-- Yes button confetti and surprise -->
+<!-- Yes button confetti + surprise + cat -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script>
   const yesBtn = document.getElementById('yes-button');
+  const catGif = document.getElementById('cat-gif');
+
   yesBtn.addEventListener('click', () => {
-    // Confetti blast
+    // Confetti
     confetti({
       particleCount: 150,
       spread: 100,
       origin: { y: 0.6 },
     });
 
-    // Delay for surprise message
+    // Show surprise message & cat
     setTimeout(() => {
-      alert("💌 Herwee 12 ni oroi gertee harij chadwal 13nd ch uulzaj magadgu shu oilgooroi za <3  🍧🌸✨");
+      alert("💌 12 ni oroi gerte hariwal 13 nd uulzaj magadgu shu oilgooroi <3");
+      catGif.style.display = "block";
     }, 600);
   });
 </script>
@@ -181,7 +190,5 @@
 
 </body>
 </html>
-
-
 
  

@@ -87,12 +87,14 @@
       100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
     }
     #music { display: none; }
-    #cat-gif {
+    #video-frame {
       margin-top: 20px;
       display: none;
-      max-width: 100%;
-      width: 200px;
-      border-radius: 15px;
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 105, 135, 0.4);
     }
   </style>
 </head>
@@ -117,12 +119,18 @@
 <div class="container">
   <div class="date-card">
     <div class="heart">❤️</div>
-    <h1>19nd zawtai bol nadtai bolzohkui biz undaahai?</h1>
+    <h1>19 nd Bolzohku biz Undaahai</h1>
     <h2>📅 July 19th</h2>
     <button id="yes-button">Yes</button>
     <button id="no-button">No</button>
-    <div class="mandarin-fruit" id="mandarin">🍊<span>Huurhun mandarin!</span></div>
-    <img id="cat-gif" src="https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif" alt="Dancing Cat">
+    <div class="mandarin-fruit" id="mandarin">🍊<span>Mandarin is watching you!</span></div>
+    <iframe
+      id="video-frame"
+      src=""
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      frameborder="0"
+    ></iframe>
   </div>
 </div>
 
@@ -156,29 +164,28 @@
   });
 </script>
 
-<!-- Yes button confetti + surprise + cat -->
+<!-- Yes button: Confetti + Video -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script>
   const yesBtn = document.getElementById('yes-button');
-  const catGif = document.getElementById('cat-gif');
+  const videoFrame = document.getElementById('video-frame');
 
   yesBtn.addEventListener('click', () => {
-    // Confetti
     confetti({
       particleCount: 150,
       spread: 100,
       origin: { y: 0.6 },
     });
 
-    // Show surprise message & cat
     setTimeout(() => {
-      alert("💌 12 ni oroi gerte hariwal 13 nd uulzaj magadgu shu oilgooroi <3");
-      catGif.style.display = "block";
+      alert("💌 12ni oroi hariwal 13 nd uulzaj magadgu shu oilgooroi <3 😽💕");
+      videoFrame.src = "https://www.youtube.com/embed/GFaLrFe4w9g?autoplay=1";
+      videoFrame.style.display = "block";
     }, 600);
   });
 </script>
 
-<!-- YouTube autoplay music -->
+<!-- Background music -->
 <iframe
   id="music"
   width="0"
@@ -190,5 +197,6 @@
 
 </body>
 </html>
+
 
  

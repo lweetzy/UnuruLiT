@@ -1,104 +1,71 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>You so pretty asf? 💘</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title>Date on July 19?</title>
   <style>
     body {
-      margin: 0;
-      background: linear-gradient(to bottom right, #ffb6c1, #ffe4e1);
-      font-family: 'Segoe UI', cursive;
+      background: linear-gradient(to bottom right, #ffe0e9, #fff5f7);
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
-      color: #d6336c;
+      padding: 50px;
+      color: #ff4d6d;
     }
     h1 {
-      margin-top: 100px;
-      font-size: 42px;
+      font-size: 3em;
+      margin-bottom: 10px;
     }
-    p {
-      font-size: 24px;
-    }
-    .buttons {
-      margin-top: 30px;
-    }
-    button {
-      font-size: 20px;
-      padding: 10px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      background-color: #ff69b4;
-      color: white;
-      transition: 0.3s;
-    }
-    button:hover {
-      background-color: #ff85c1;
-    }
-    #response {
-      margin-top: 30px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .hearts {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      pointer-events: none;
+    h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
     }
     .heart {
-      color: #ff69b4;
-      font-size: 24px;
-      position: absolute;
-      animation: float 6s ease-in infinite;
+      font-size: 3em;
+      color: #ff4d6d;
+      animation: pulse 1.2s infinite;
     }
-    @keyframes float {
-      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .date-card {
+      background: #fff0f5;
+      border: 2px solid #ffb6c1;
+      border-radius: 20px;
+      display: inline-block;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(255, 105, 135, 0.2);
+    }
+    button {
+      background-color: #ff6b81;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff4d6d;
+    }
+    .mandarin {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #d6336c;
     }
   </style>
 </head>
 <body>
-
-  <h1>Will You Be Baljkaa's girlfrend💖</h1>
-  <p>Baljkaag borluulan?</p>
-
-  <div class="buttons">
-    <button onclick="sayYes()">Yes 💖</button>
-    <button onclick="sayNo()">No 💔</button>
+  <div class="date-card">
+    <div class="heart">❤️</div>
+    <h1>Will you go on a date with me?</h1>
+    <h2>📅 July 19th</h2>
+    <button onclick="alert('Yay!! ❤️ Can’t wait!')">Yes</button>
+    <button onclick="alert('Aww 😢 Maybe next time…')">No</button>
+    <div class="mandarin">和我一起约会好吗？</div>
   </div>
-
-  <div id="response"></div>
-  <div class="hearts" id="hearts"></div>
-
-  <script>
-    function sayYes() {
-      document.getElementById("response").innerHTML = "💘 Thank you, my love! You made me the happiest person alive! 💘";
-    }
-
-    function sayNo() {
-      document.getElementById("response").innerHTML = "⚠️ Error: You can't say no to this much love 😭";
-      alert("System crash: Too much heartbreak detected 💔");
-    }
-    // Heart animation
-    const hearts = document.getElementById('hearts');
-
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (2 + Math.random() * 3) + 's';
-      heart.textContent = '💗';
-      hearts.appendChild(heart);
-      setTimeout(() => heart.remove(), 6000);
-    }
-
-    setInterval(createHeart, 300);
-  </script>
-
 </body>
 </html>
 
